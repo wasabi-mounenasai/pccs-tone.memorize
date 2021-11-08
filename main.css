@@ -1,13 +1,15 @@
 html{height: 100%}
 body{
-  margin:0;
   height: 100%;
+  margin:0;
   background-color: #EEEEEE;
 }
 div.bigArea{
   display: flex;
   flex-flow: column;
-  max-width: 800px;
+  width: 100%;
+  height: 100%;
+  max-width: 546px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -15,13 +17,16 @@ p{
   letter-spacing: 0.1em;
   font-family: sans-serif;
   color: #696969;
-  margin-top:30px;
+  margin-top:20px;
+  top: 10%;
   border: 20px;
+  width: 90%;
 }
 
 /* firstscreen */
 .firstscreen{
   position: absolute;
+  text-align: center;
   top:0px;
   left:0px;
   width: 100%;
@@ -48,16 +53,28 @@ p{
 }
 .titlebtns{
   position: absolute;
+  width: 100%;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 /* gamingscreen */
+.main-nav {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 100%;
+    top:40%;
+    transform: translate(0%, -50%);
+  }
+
 .croissent{
   position:absolute;
-  width: 105%;
-	height: 105%;
+  width: 100%;
+	height: 100%;
 	border-radius: 0 100% 100% 0 / 58%;
   background-color: #ffffff;
   transform: translate(-50%, -50%);
@@ -67,7 +84,6 @@ p{
 
 p.title {
   font-size: 30px;
-  width: 546px;
   margin-bottom: 40px;
   margin-right: auto;
   margin-left: auto;
@@ -75,13 +91,6 @@ p.title {
   background-color: white;
   border-radius: 20px;
 }
-.main-nav {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    margin-right: auto;
-    margin-left: auto;
-  }
 
 
 div.frameLeft{
@@ -89,7 +98,6 @@ div.frameLeft{
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  min-width: 25%;
 }
 div.frameLeft button{
   margin-top:25px;
@@ -102,7 +110,6 @@ div.frameCenter{
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  min-width:25%;
 }
 div.frameRight{
   display: flex;
@@ -154,6 +161,10 @@ button#v{
   height:130px;
   width:130px;
 }
+button #gameStart{
+  margin: 0;
+}
+
 .last-area-lower,.last-area-upper{
   position:relative;
   right:25%;
@@ -259,8 +270,9 @@ button#v{
   width: 65px;
   height: 65px;
   top: 100%;
-  left: 100%;
-  transform: translate(-100%, -100%);
+  left: 90%;
+
+  transform: translate(-150%, -100%);
   transition: 0.2s;
   opacity: 1;
 }
