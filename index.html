@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="Main.css" />
+    <title>sample</title>
+</head>
+
+<body>
+  <div class="firstscreen">
+    <p class="title">PCCS : TONE</p>
+    <div class="titlebtns">
+      <button type="button" id="memoryMode" onclick="gameStart(this); memoryMode();"><div class="btntext">MEMORY<br>MODE</div></button>
+      <button type="button" id="gameStart" onclick="gameStart(this); questionStart()"><div class="btntext">GAME<br>MODE</div></button>
+    </div>
+  </div>
+  <div class="bigArea">
+    <p class="title" id="title" ></p>
+   <div class="main-nav">
+    <div class="croissent"></div>
+     <div class="frameLeft"></div>
+      <div class="frameCenter"></div>
+        <div class="frameRight">
+          <div class="last-area-upper"></div>
+          <div class="last-area"></div>
+          <div class="last-area-lower"></div>
+        </div>
+        <div class="return"><button type="button" id="return" onclick="returnTitle();">back<br>to<br>title</button></div>
+        <div id="animeAr" class="animeArea">
+          <div id="circle"></div>
+          <div id="cross"></div>
+        </div>
+      </div>
+    </div>
+
+   <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+   <script type="text/javascript" src="js.js"></script>
+   <script type="text/javascript" src="pccsgradient.js"></script>
+ </body>
+</html>
