@@ -265,9 +265,9 @@ button#v{
   opacity: 1;
 }
 
-.return button:hover{
+/* .return button:hover{
   animation: rotate 30s linear infinite;
 }
 .return button:hover .btntext{
   animation: rotate-elm 30s linear infinite;
-}
+} */
