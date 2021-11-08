@@ -1,0 +1,273 @@
+html{height: 100%}
+body{
+  margin:0;
+  height: 100%;
+  background-color: #EEEEEE;
+}
+div.bigArea{
+  display: flex;
+  flex-flow: column;
+  max-width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+}
+p{
+  letter-spacing: 0.1em;
+  font-family: sans-serif;
+  color: #696969;
+  margin-top:30px;
+  border: 20px;
+}
+
+/* firstscreen */
+.firstscreen{
+  position: absolute;
+  top:0px;
+  left:0px;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 4;
+}
+.firstscreen button{
+  position: relative;
+  height: 150px;
+  width: 150px;
+}
+.firstscreen button:hover{
+  animation: rotate 30s linear infinite;
+}
+.firstscreen button:hover .btntext{
+  animation: rotate-elm 30s linear infinite;
+}
+@keyframes rotate {
+  100% { transform: rotate(360deg); }
+}
+@keyframes rotate-elm {
+  100% { transform: rotate(-360deg); }
+}
+.titlebtns{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* gamingscreen */
+.croissent{
+  position:absolute;
+  width: 105%;
+	height: 105%;
+	border-radius: 0 100% 100% 0 / 58%;
+  background-color: #ffffff;
+  transform: translate(-50%, -50%);
+  top:50%;
+  left:50%;
+}
+
+p.title {
+  font-size: 30px;
+  width: 546px;
+  margin-bottom: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  background-color: white;
+  border-radius: 20px;
+}
+.main-nav {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+
+div.frameLeft{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 25%;
+}
+div.frameLeft button{
+  margin-top:25px;
+  margin-bottom: 25px;
+  margin-right: 30px;
+}
+
+div.frameCenter{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  min-width:25%;
+}
+div.frameRight{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+div.last-area{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+button{
+  color: #696969;
+  font-size: 20px;
+  padding: 0;
+  border: 0;
+  position: relative;
+  height: 80px;
+  width: 80px;
+  background: #fff;
+  border-radius: 50%;
+  margin:22px;
+  filter: drop-shadow(0px 5px 5px rgb(0, 0, 0, 0.2));
+}
+
+button:hover{
+  filter: drop-shadow(0px 5px 5px rgb(0, 0, 0, 0.6));
+  transition: 0.2s;
+  }
+button:active{
+  filter: drop-shadow(inset 0px 0px 0px rgb(0, 0, 0, 0));
+  box-shadow: inset 0px 5px 5px rgb(0, 0, 0, 0.4);
+  }
+button:disabled {
+  background-color: white;
+  color: #696969;
+  }
+
+button#s{
+  height:65px;
+  width:65px;
+  margin-right: 20px;
+  margin-left: 5px;
+}
+button#v{
+  height:130px;
+  width:130px;
+}
+.last-area-lower,.last-area-upper{
+  position:relative;
+  right:25%;
+  margin:-20px;
+}
+
+.item{
+  position: absolute;
+    background: #aaa;
+    width: 19px;
+    height: 19px;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+}
+#s .item{
+  width:16px;
+  height:16px;
+}
+#v .item{
+  width:15px;
+  height:15px;
+}
+#return .item{
+  width:13px;
+  height:13px;
+}
+
+
+.animeArea{
+  position:absolute;
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.2s;
+  opacity: 1;
+  pointer-events: none;
+}
+
+#circle{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  height:150px;
+  width:150px;
+  border-radius: 50%;
+  border: solid 10px red;
+  z-index: 0;
+  opacity: 0;
+  margin:0 auto;
+  pointer-events: none;
+  transition: 0.2s;
+}
+
+
+#circle.active{
+    top:40%;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+#cross {
+  position: absolute;
+  top: 47%;
+  left:8%;
+  display: block;
+  color: blue;
+  width: 170px;
+  height: 10px;
+  background: currentColor;
+  transform: rotate(45deg) ;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.2s;
+}
+#cross::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: inherit;
+  transform: rotate(90deg);
+}
+
+#cross.active{
+  top: 37%;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.return button{
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  position:absolute;
+  width: 65px;
+  height: 65px;
+  top: 100%;
+  left: 100%;
+  transform: translate(-100%, -100%);
+  transition: 0.2s;
+  opacity: 1;
+}
+
+.return button:hover{
+  animation: rotate 30s linear infinite;
+}
+.return button:hover .btntext{
+  animation: rotate-elm 30s linear infinite;
+}
