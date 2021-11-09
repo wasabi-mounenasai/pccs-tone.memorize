@@ -1,5 +1,6 @@
 var toneList = ["p","ltg","g","dkg","lt","sf","d","dk","b","s","dp","v"],
     answerTone;
+var firstgame = 0
 
 $(function() {
   for( j=0; j<12; j++){
@@ -10,15 +11,16 @@ $(function() {
     sqGradiant("memoryMode",toneColorList[4])
     sqGradiant("gameStart",toneColorList[8])
     sqGradiant("return",toneColorList[0])
-    getGraphics();
 })
 
 function gameStart() {
+  if (firstgame == 0){getGraphics(); firstgame += 1}
   killbtn()
   $('.firstscreen').fadeOut(2000);
 }
 
 function memoryMode() {
+  if (firstgame == 0){getGraphics(); firstgame += 1}else{}
   killbtn()
   document.getElementById("title").textContent = "MEMORY MODE"
   $(".main-nav button").each(function(k, elem) {
