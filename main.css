@@ -1,6 +1,8 @@
-html{height: 100%}
+html{height: 100%;
+  max-width:100%}
 body{
   height: 100%;
+  max-width:100%;
   margin:0;
   background-color: #EEEEEE;
 }
@@ -64,8 +66,6 @@ p{
     position: relative;
     display: flex;
     justify-content: center;
-    margin-right: 20px;
-    margin-left: 20px;
     width: 100%;
     top:40%;
     transform: translate(0%, -50%);
@@ -73,7 +73,7 @@ p{
 
 .croissent{
   position:absolute;
-  width: 100%;
+  width: 105%;
 	height: 100%;
 	border-radius: 0 100% 100% 0 / 58%;
   background-color: #ffffff;
@@ -136,6 +136,10 @@ button{
   border-radius: 50%;
   margin:22px;
   filter: drop-shadow(0px 5px 5px rgb(0, 0, 0, 0.2));
+  -webkit-user-select: none;
+   -moz-user-select: none;
+    -ms-user-select: none;
+        user-select: none;
 }
 
 button:hover{
@@ -173,12 +177,8 @@ button #gameStart{
 
 .item{
   position: absolute;
-    background: #aaa;
     width: 19px;
     height: 19px;
-    text-align: center;
-    color: #fff;
-    font-size: 20px;
 }
 #s .item{
   width:16px;
@@ -215,7 +215,7 @@ button #gameStart{
   height:150px;
   width:150px;
   border-radius: 50%;
-  border: solid 10px red;
+  border: solid 10px #F9344C;
   z-index: 0;
   opacity: 0;
   margin:0 auto;
@@ -235,7 +235,7 @@ button #gameStart{
   top: 47%;
   left:8%;
   display: block;
-  color: blue;
+  color: #386CB0;
   width: 170px;
   height: 10px;
   background: currentColor;
@@ -269,17 +269,108 @@ button #gameStart{
   position:absolute;
   width: 65px;
   height: 65px;
-  top: 100%;
+  top: 95%;
   left: 90%;
-
-  transform: translate(-150%, -100%);
+  transform: translate(-100%, -100%);
   transition: 0.2s;
   opacity: 1;
 }
-
+.disablableTo{
+  display: inline;
+}
 /* .return button:hover{
   animation: rotate 30s linear infinite;
 }
 .return button:hover .btntext{
   animation: rotate-elm 30s linear infinite;
 } */
+
+@media (max-width: 619px) {
+
+  .croissent{
+    width: 90vw;
+}
+  div.frameLeft button{
+    margin-top: 4.032258vw;
+    margin-bottom: 4.032258vw;
+    margin-right: 4.83871vw;
+  }
+  button{
+    height: 12.903226vw;
+    width: 12.903226vw;
+    margin: 3.548387vw;
+    filter: drop-shadow(0px 0.806452vw 0.806452vw rgb(0, 0, 0, 0.2));
+  }
+  .firstscreen button{
+    margin: 22px;
+  }
+
+  button#s{
+    height:10.483871vw;
+    width:10.483871vw;
+    margin-right: 3.225806vw;
+    margin-left: 0.806452vw;
+  }
+  button#v{
+    height:20.967742vw;
+    width:20.967742vw;
+  }
+  button #gameStart{
+    margin: 0;
+  }
+  .last-area-lower,.last-area-upper{
+    margin:-3.225806vw;
+  }
+  .item{
+      width: 3.064516vw;
+      height: 3.064516vw;
+  }
+  #s .item{
+    width:2.580645vw;
+    height:2.580645vw;
+  }
+  #v .item{
+    width:2.419355vw;
+    height:2.419355vw;
+  }
+  #return .item{
+    width:2.096774vw;
+    height:2.096774vw;
+  }
+  .titlebtns div.item{
+      width: 19px;
+      height: 19px;
+  }
+
+}
+@media screen and (max-width: 499px) {
+  .return button{
+    width: 13vw;
+    height: 13vw;
+    font-size: 2.4vw;
+}
+@media screen and (max-width: 413px) {
+
+  .firstscreen button{
+    height: 36.319613vw;
+    width: 36.319613vw;
+    margin: 5.31401vw;
+  }
+  .firstscreen.item{
+      width: 4.589372vw;
+      height: 4.589372vw;
+  }
+  .titlebtns div.item{
+      width: 4.589372vw;
+      height: 4.589372vw;
+  }
+  button #memoryMode{
+    margin: 0.242718vw;
+  }
+}
+@media screen and (max-width: 374px) {
+  .disablableTo{
+    display: none;
+}
+
+}
