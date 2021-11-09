@@ -277,21 +277,20 @@ button #gameStart{
   position:absolute;
   width: 65px;
   height: 65px;
-  top: 95%;
-  left: 90%;
-  transform: translate(-100%, -100%);
+  top: 80%;
+  left: 75%;
   transition: 0.2s;
   opacity: 1;
 }
 .disablableTo{
   display: inline;
 }
-/* .return button:hover{
+#return:hover{
   animation: rotate 30s linear infinite;
 }
-.return button:hover .btntext{
+#return:hover .btntext{
   animation: rotate-elm 30s linear infinite;
-} */
+}
 
 @media (max-width: 619px) {
 
