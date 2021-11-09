@@ -62,3 +62,15 @@ function getGraphics(){
         $(targetTone).append('<div class="item"></div>')}
         sqGradiant(toneList[i],toneColorList[i])}
 }
+
+function itemResize(){
+    sqGradiant("memoryMode",toneColorList[4]);
+    sqGradiant("gameStart",toneColorList[8]);
+    sqGradiant("return",toneColorList[0]);
+    for( i=0; i<toneList.length; i++){
+      var targetTone = "#" + toneList[i]
+        sqGradiant(toneList[i],toneColorList[i])}
+      console.log("resized");
+}
+
+$(window).resize(itemResize);
